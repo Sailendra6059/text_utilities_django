@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'src/styles.css' %}">
+</head>
+<body class="bg-sky-100">
+    <h1 class="text-2xl bg-yellow-100 mb-6 p-4 text-center font-bold border-2 border-black">Text Analyzer</h1>
+    <form action="/textanalyzer" method="get">
+    <textarea  name="text" class="w-[89%] block ml-12 rounded-md border-2 border-black p-2 text-2xl " rows="10 "></textarea>
+    <br>
+    <div class="flex flex-col gap-2 ml-12  text-xl">
+   <p> <input type="checkbox" name="analyze"  > Remove Special Symbols</p>
+   <p><input type="checkbox" name="capitalize" > Capitalize my text</p>
+   <p><button type="Submit" class="bg-blue-600 text-white text-bold border border-black font-bold shadow-sm shadow-black p-2 min-w-min w-32 rounded-lg hover:bg-blue-400 mt-4">Submit</button></p>
+    </div>
+    </form>
+</body>
+</html>
